@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Description;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -23,6 +24,22 @@ public class SpringapplicationApplication {
 	}
 	
 	@Bean
+	CommandLineRunner runner(PersonRepository repository) {
+		return agrs -> {
+			
+			Employee employee = new Employee();
+			employee.setName("Duy");
+			
+			repository.save(employee);
+			Employee savedEmployee = repository.findById(employee.getId());
+			System.out.println("hello");
+			System.out.println(savedEmployee.getId());
+			System.out.println(savedEmployee.getName());
+			
+		};
+	}
+	
+	/*@Bean
 	public RestTemplate restTemplate(RestTemplateBuilder builder) {
 		return builder.basicAuthentication("wbadmin", "wbadmin").build();
 	}
@@ -46,6 +63,6 @@ public class SpringapplicationApplication {
 			//		"http://localhost:8080/kie-server/services/rest/server/containers/HR_Application_1.0.0-SNAPSHOT/processes/definitions/HR_Application.OnboardingProcess/entities?containerId=HR_Application_1.0.0-SNAPSHOT&processId=HR_Application.OnboardingProcess", ProcessAssociatedEntities.class);
 			System.out.println(response.toString());
 		};
-	}
+	}*/
 
 }
