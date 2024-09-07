@@ -45,5 +45,25 @@ public class WebView {
 		System.out.println(formObject.isHobbies());
 		return "formSuccess";
 	}
+	
+	@GetMapping(path = "/exerciseListAndTable")
+	public String exerciseListAndTable() {
+		return "Exercise_HTMLListAndTable";
+	}
+	
+	@GetMapping(path = "/exerciseSemanticHTML")
+	public String exerciseSemanticHTML() {
+		return "Exercise_semanticHTML";
+	}
+	
+	@GetMapping(path = "/exerciseCssLayout")
+	public String exerciseCssLayout() {
+		return "Exercise_HTML_CSSLayout";
+	}
+	
+	@GetMapping(path = "/exerciseCssSelector")
+	public String exerciseCssSelector() {
+		return "Exercise_CSSSelector";
+	}
 
 }

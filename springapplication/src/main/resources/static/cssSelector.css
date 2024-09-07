@@ -1,0 +1,29 @@
+#hover_p {
+	color: #33ccff;
+	width: 90px;
+	height: 30px;
+}
+
+#hover_p:hover {
+	background-color: #0000ff
+}
+
+.hover_p {
+	color: #33ccff;
+	width: 90px;
+	height: 30px;
+}
+
+.hover_p:hover {
+	background-color: #0000ff
+}
+
+[class] {
+	color: #33ccff;
+	width: 90px;
+	height: 30px;
+}
+
+[class]:hover {
+	background-color: #0000ff
+}

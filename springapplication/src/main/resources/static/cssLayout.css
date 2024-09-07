@@ -1,0 +1,21 @@
+.menu {
+	float: left;
+	margin-right: 20px;
+}
+
+.flexDiv {
+	display: flex
+}
+
+.flexMenu {
+	flex: 1
+}
+
+.flexContent {
+	flex: 7
+}
+
+.gridDiv {
+	display: grid;
+	grid : 150px / auto auto
+}
