@@ -2,23 +2,55 @@
 <html xmlns:th="https://www.thymeleaf.org">
 	<head></head>
 	<body>
-		<form action="handleSubmit2" method="post">
-			<label for="name">Name</label>
-			<input id="name" type="text" name="name"></input>
-			<br>
-			<label for="email">Email</label>
-			<input id="email" type="email" name="email"></input>
-			<br>
-			<label for="pwd">Password</label>
-			<input id="pwd" type="password" name="password"></input>
-			<br>
-			<input id="gender" type="radio" name="gender"></input>
-			<label for="gender">Gender</label>
-			<br>
-			<input id="hobbies" type="checkbox" name="hobbies"></input>
-			<label for="hobbies">Hobbies</label>
-			<br>
-			<input type="submit" value="Submit" />
+		<form id="myForm" action="handleSubmit2" method="post">
+			<div style="border-style:solid">
+				<label for="name">Name</label>
+				<input id="name" type="text" name="name"></input>
+				<!--  <br> -->
+				<label for="email">Email</label>
+				<input id="email" type="email" name="email"></input>
+				<br>
+				<label for="pwd">Password</label>
+				<input id="pwd" type="password" name="password"></input>
+				<br>
+				<input id="gender" type="radio" name="gender"></input>
+				<label for="gender">Gender</label>
+				<br>
+				<input id="hobbies" type="checkbox" name="hobbies"></input>
+				<label for="hobbies">Hobbies</label>
+				<br>
+				<input type="submit" value="Submit" />
+			</div>
+			<p>paragraph in Form</p>
+			<a href="basicHTMLStructure">link in Form</a>
+			<div style="border-style:solid">
+				<label for="name">Name</label>
+				<input id="name" type="text" name="name"></input>
+				<!--  <br> -->
+				<label for="email">Email</label>
+				<input id="email" type="email" name="email"></input>
+				<br>
+				<label for="pwd">Password</label>
+				<input id="pwd" type="password" name="password"></input>
+				<br>
+				<input id="gender" type="radio" name="gender"></input>
+				<label for="gender">Gender</label>
+				<br>
+				<input id="hobbies" type="checkbox" name="hobbies"></input>
+				<label for="hobbies">Hobbies</label>
+				<br>
+				<input type="submit" value="Submit" />
+			</div>
 		</form>
+		
+		<!-- Button outside the form element -->
+		<button id="submitButton">Submit Form</button>
+		
+		<script>
+		    // JavaScript to handle button click
+		    document.getElementById('submitButton').addEventListener('click', function() {
+		        document.getElementById('myForm').submit(); // Trigger form submission
+		    });
+		</script>
 	</body>
 </html>
