@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Semantic HTML</title>
+		<link rel="stylesheet" href="cssLayout.css cssResponsive.css">
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+	<body style="padding-top: 100px">
+		<header style="border-style:solid; position:fixed; top: 0; width: 100%; background-color:#d6d6c2">
+			<h1>Brown Coffee</h1>
+		</header>
+		
+		<form id="myForm" action="handleSubmit2" method="post">
+		
+			<div class="container">
+				<div class="panel panel-default">
+					<div class="panel-heading">Panel Heading</div>
+					<div class="panel-body">
+						
+							<div>
+								<label for="name">Name</label>
+								<input id="name" type="text" name="name"></input>
+								<!--  <br> -->
+								<label for="email">Email</label>
+								<input id="email" type="email" name="email"></input>
+								<br>
+								<label for="pwd">Password</label>
+								<input id="pwd" type="password" name="password"></input>
+								<br>
+								<input id="gender" type="radio" name="gender"></input>
+								<label for="gender">Gender</label>
+								<br>
+								<input id="hobbies" type="checkbox" name="hobbies"></input>
+								<label for="hobbies">Hobbies</label>
+								<br>
+								<input type="submit" value="Submit" />
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		
+		</form>
+		
+		<footer style="border-style:solid; background-color:#d6d6c2">
+			<p>Company A - Address B</p>
+			<p>Phone: 123456</p>
+			<p>Email: 123@a.b</p>
+		</footer>
+	</body>
+</html>

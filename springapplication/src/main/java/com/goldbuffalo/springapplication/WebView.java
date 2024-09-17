@@ -65,5 +65,10 @@ public class WebView {
 	public String exerciseCssSelector() {
 		return "Exercise_CSSSelector";
 	}
+	
+	@GetMapping("/Form1")
+	public String getForm1() {
+		return "Form1";
+	}
 
 }
