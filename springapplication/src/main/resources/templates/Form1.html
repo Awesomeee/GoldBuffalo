@@ -10,13 +10,28 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+		<style>
+			.flex-container {
+			  display: flex;
+			  background-color: DodgerBlue;
+			}
+			
+			.flex-container > div {
+			  background-color: #f1f1f1;
+			  margin: 10px;
+			  padding: 20px;
+			  font-size: 30px;
+			  flex: 1;
+			}
+		</style>
 	</head>
 	<body style="padding-top: 100px">
 		<header style="border-style:solid; position:fixed; top: 0; width: 100%; background-color:#d6d6c2">
 			<h1>Brown Coffee</h1>
 		</header>
 		
-		<form id="myForm" action="handleSubmit2" method="post">
+		<form id="myForm" action="handleSubmit2" method="post" enctype="multipart/form-data">
 		
 			<div class="container">
 				<div class="panel panel-default">
@@ -24,22 +39,47 @@
 					<div class="panel-body">
 						
 							<div>
-								<label for="name">Name</label>
-								<input id="name" type="text" name="name"></input>
-								<!--  <br> -->
-								<label for="email">Email</label>
-								<input id="email" type="email" name="email"></input>
+								<div class="flex-container">
+									<div>
+										<label for="name">Name</label>
+										<input id="name" type="text" name="name"></input>
+										<!--  <br> -->
+									</div>
+										
+									<div>
+										<label for="email">Email</label>
+										<input id="email" type="email" name="email"></input>
+									</div>
+								</div>
 								<br>
-								<label for="pwd">Password</label>
-								<input id="pwd" type="password" name="password"></input>
+								<div class="flex-container">
+									<div>
+										<label for="pwd">Password</label>
+										<input id="pwd" type="password" name="password"></input>
+									</div>
+									<div>
+										<input id="gender" type="radio" name="gender"></input>
+										<label for="gender">Gender</label>
+									</div>
+								</div>
 								<br>
-								<input id="gender" type="radio" name="gender"></input>
-								<label for="gender">Gender</label>
+								<div class="flex-container">
+									<div>
+										<input id="hobbies" type="checkbox" name="hobbies"></input>
+										<label for="hobbies">Hobbies</label>
+									</div>
+									<div>
+										<input id="file" type="file" name="file"></input>
+										<label for="file">Your Document:</label>
+									</div>
+								</div>
 								<br>
-								<input id="hobbies" type="checkbox" name="hobbies"></input>
-								<label for="hobbies">Hobbies</label>
-								<br>
-								<input type="submit" value="Submit" />
+								<div class="flex-container">
+									<div>
+										<input type="submit" value="Submit" />
+									</div>
+								</div>
+								
 							</div>
 						
 					</div>
